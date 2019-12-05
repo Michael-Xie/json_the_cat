@@ -12,7 +12,7 @@ const printSearchResult = function(result) {
 
 request(searchBreed, (error, response, body) => {
   if (error) {
-    return error;
+    console.log(error);
   } else {
     let breedInfo = JSON.parse(body);
     breedInfo.length > 0 ? printSearchResult(breedInfo) : console.log(`${breed} not found. Try again.`);
